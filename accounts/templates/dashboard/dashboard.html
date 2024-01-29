@@ -1,0 +1,37 @@
+{% extends 'admin_base.html' %}
+
+{% block admincontent %}
+
+<div class="row">
+  <div class="col-1"></div>
+  <div class="col-10">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">VALID EMAILS</th>
+          <th scope="col">INVALID EMAILS</th>
+          <!-- <th scope="col">Last</th>
+                <th scope="col">Handle</th> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" style="color: green;">
+            {{valid_email}}
+          </th>
+          <th scope="row" style="color: red;">
+            {{invalid_email}}
+          </th>
+          <!-- <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td> -->
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+  <div class="col-1"></div>
+</div>
+
+{% endblock %}

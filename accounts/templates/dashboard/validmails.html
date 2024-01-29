@@ -1,0 +1,41 @@
+{% extends 'admin_base.html' %}
+
+{% block admincontent %}
+
+<div class="row">
+    <div class="col-1"></div>
+    <div class="col-10">
+
+      <a href="/account/valid-mails-csv/">
+      <button class="btn btn-success" style="margin-left: 10px;">CSV</button>
+      </a>
+
+      <br>
+      <br>
+
+
+        <!-- list -->
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">EMAIL</th>
+                <th scope="col">DATE</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for x in email %}
+              <tr>
+                <td>{{x.id}}</td>
+                <td>{{x.email}}</td>
+                <td>{{x.datetime}}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        
+    </div>
+    <div class="col-1"></div>
+</div>
+
+{% endblock %}

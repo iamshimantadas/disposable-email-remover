@@ -1,0 +1,21 @@
+{% extends 'admin_base.html' %}
+
+{% block admincontent %}
+
+<div class="row">
+    <div class="col-1"></div>
+    <div class="col-10">
+
+        <form method="post">
+          {% csrf_token %}
+            <div class="mb-3">
+                <label for="emails" class="form-label">Enter Emails</label>
+                <textarea class="form-control" name="emails" id="emails" rows="20"></textarea>
+              </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+    <div class="col-1"></div>
+</div>
+
+{% endblock %}
